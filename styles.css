@@ -70,7 +70,7 @@ img{ max-width:100%; display:block; border-radius:12px; }
 
 .toolbar{ padding:14px 0 6px; }
 .toolbar-row{ display:flex; gap:12px; flex-wrap:wrap; justify-content:space-between; }
-.select{ min-width: 100px; }
+.select{ min-width: 180px; }
 
 .products{ display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; padding:22px 0 30px; }
 @media (max-width: 1050px){ .products{ grid-template-columns: repeat(2, 1fr); } }
