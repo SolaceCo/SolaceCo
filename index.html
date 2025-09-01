@@ -3,56 +3,121 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Top Picks — Your Trusted Deals</title>
+  <title>Top Picks — Trusted Deals</title>
+
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.png" />
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
-    <h1>Top Picks — Your Trusted Deals</h1>
-  </header>
+  <!-- Sticky Scroll-to-Top Button -->
+  <button id="scrollTopBtn" class="btn btn-primary">
+    ↑ Top
+  </button>
 
-  <!-- Products Section -->
-  <main class="products">
-    <div class="product-card">
-      <img src="https://via.placeholder.com/150" alt="Product 1">
-      <div class="product-info">
-        <h2>Product Title 1</h2>
-        <div class="badges">
-          <span class="badge top-rated">Top Rated</span>
-          <span class="badge best-seller">Best Seller</span>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Deals You Actually Want, Without the Waste</h1>
+          <p>Top-rated, hand-picked products that save you time, money, and hassle — no fluff, just value.</p>
         </div>
-        <p class="price">$49.99</p>
-        <p class="description">This is a short description of product 1.</p>
-        <a href="#" class="buy-btn">Buy Now</a>
       </div>
-    </div>
+    </section>
 
-    <div class="product-card">
-      <img src="https://via.placeholder.com/150" alt="Product 2">
-      <div class="product-info">
-        <h2>Product Title 2</h2>
-        <div class="badges">
-          <span class="badge top-rated">Top Rated</span>
+    <!-- PRODUCTS -->
+    <section id="products" class="products container">
+      <!-- Product 1 -->
+      <article class="card">
+        <div class="card-media">
+          <img src="assets/earbuds.jpg" alt="Compact Bluetooth Earbuds" loading="lazy">
         </div>
-        <p class="price">$29.99</p>
-        <p class="description">This is a short description of product 2.</p>
-        <a href="#" class="buy-btn">Buy Now</a>
-      </div>
-    </div>
+        <div class="card-body">
+          <h3 class="card-title">Compact Bluetooth Earbuds</h3>
+          <p class="card-desc">Crystal-clear sound, long battery, and pocket-size case — perfect for workouts or commuting.</p>
+          <ul class="bullet-list">
+            <li>Battery: ~8h playback</li>
+            <li>Case: USB-C fast charge</li>
+            <li>IPX5 water-resistant</li>
+          </ul>
+          <div class="badge-container">
+            <span class="badge">Top Rated</span>
+          </div>
+          <div class="meta">
+            <span class="price">$39.99</span>
+            <span class="rating" aria-label="Rating 4.4 out of 5">★ 4.4</span>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://example.com/your-affiliate-link?sku=earbuds" target="_blank" rel="nofollow noopener">Buy Now</a>
+          </div>
+        </div>
+      </article>
 
-    <!-- Add more product-cards as needed -->
+      <!-- Product 2 -->
+      <article class="card">
+        <div class="card-media">
+          <img src="assets/pan.jpg" alt="Ceramic Nonstick Pan" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Ceramic Nonstick Pan</h3>
+          <p class="card-desc">Even heating, easy cleanup, sturdy handle — makes everyday cooking effortless and enjoyable.</p>
+          <ul class="bullet-list">
+            <li>Oven-safe to 260°C</li>
+            <li>PFAS-free coating</li>
+            <li>Dishwasher safe</li>
+          </ul>
+          <div class="badge-container">
+            <span class="badge">Best Seller</span>
+          </div>
+          <div class="meta">
+            <span class="price">$54.00</span>
+            <span class="rating" aria-label="Rating 4.6 out of 5">★ 4.6</span>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://example.com/your-affiliate-link?sku=pan" target="_blank" rel="nofollow noopener">Buy Now</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 3 -->
+      <article class="card">
+        <div class="card-media">
+          <img src="assets/dumbbells.jpg" alt="Adjustable Dumbbells Set" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Adjustable Dumbbells Set</h3>
+          <p class="card-desc">Compact set with quick-dial adjustment — ideal for beginners and advanced lifters alike.</p>
+          <ul class="bullet-list">
+            <li>5–52.5 lb range</li>
+            <li>Steel core plates</li>
+            <li>Rubberized grip</li>
+          </ul>
+          <div class="badge-container">
+            <span class="badge">Top Rated</span>
+          </div>
+          <div class="meta">
+            <span class="price">$129.00</span>
+            <span class="rating" aria-label="Rating 4.7 out of 5">★ 4.7</span>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://example.com/your-affiliate-link?sku=dumbbells" target="_blank" rel="nofollow noopener">Buy Now</a>
+          </div>
+        </div>
+      </article>
+    </section>
   </main>
 
-  <!-- Scroll to Top Button -->
-  <button id="scrollTopBtn">⬆ Scroll to Top</button>
-
-  <!-- Footer -->
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Your Company. All rights reserved.</p>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Trusted Deals • Curated picks, updated regularly.</p>
+      <p class="disclaimer">Prices and availability subject to change. Some links are affiliate links.</p>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
-</html>
+  </html>
