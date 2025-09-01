@@ -1,17 +1,15 @@
 // Footer year
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if(yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Scroll to top button
-const scrollTopBtn = document.getElementById('scrollTopBtn');
+// Scroll-to-top button
+const scrollBtn = document.getElementById('scrollTopBtn');
+if(scrollBtn){
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('show-scroll', window.scrollY > 200);
+  });
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    scrollTopBtn.style.display = 'block';
-  } else {
-    scrollTopBtn.style.display = 'none';
-  }
-});
-
-scrollTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
