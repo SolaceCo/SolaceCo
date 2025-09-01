@@ -5,17 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Top Picks — Trusted Deals</title>
 
+  <!-- SEO -->
+  <meta name="description" content="Hand-picked products that save you time, money, and hassle — top-rated deals you can trust.">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Top Picks — Trusted Deals">
+  <meta property="og:description" content="Hand-picked products that save you time, money, and hassle.">
+  <meta property="og:image" content="assets/hero-image.jpg"> <!-- Replace with a good preview image -->
+  <meta property="og:url" content="https://yourusername.github.io/your-repo-name">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Styles & Fonts -->
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.png" />
+
+  <!-- Google Analytics (optional, replace ID with your own) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
 </head>
 <body>
 
-  <!-- Sticky Scroll-to-Top Button -->
-  <button id="scrollTopBtn" class="btn btn-primary">
-    ↑ Top
-  </button>
+  <!-- Scroll-to-Top Button -->
+  <button id="scrollTopBtn" class="btn btn-primary">↑ Top</button>
 
   <main>
     <!-- HERO -->
