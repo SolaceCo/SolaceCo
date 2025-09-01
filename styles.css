@@ -23,18 +23,26 @@ img{ max-width:100%; display:block; border-radius:12px; }
   border-bottom: 1px solid rgba(255,255,255,0.06);
   display:flex; justify-content:center; padding:8px 0;
 }
+
 #scrollTopBtn{
-  display:none;
+  display:none; /* hidden initially */
   padding:10px 16px;
   border-radius:30px;
   font-size:16px; font-weight:700;
   background: var(--primary); color:#0a1320;
   border:none; cursor:pointer; opacity:0.85;
-  display:flex; align-items:center; gap:6px;
-  transition: opacity 0.2s ease;
+  align-items:center; gap:6px;
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
-#scrollTopBtn:hover{ opacity:1; }
-.show-scroll{ display:flex !important; }
+#scrollTopBtn:hover{
+  opacity:1;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5), 0 0 8px rgba(110,231,183,0.6);
+}
+.show-scroll{
+  display:flex !important;
+}
 
 .hero{
   padding:60px 0 40px;
@@ -89,4 +97,4 @@ img{ max-width:100%; display:block; border-radius:12px; }
   .card-media img{ width:100%; height:auto; }
   .actions .btn{ width:100%; }
   #scrollTopBtn{ justify-content:center; padding:10px 12px; font-size:14px; }
-  }
+}
