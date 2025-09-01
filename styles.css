@@ -44,7 +44,7 @@ img{ max-width:100%; display:block; border-radius:12px; }
 .card-desc{ margin:0; color:var(--muted); }
 .bullet-list{ margin:8px 0 0 18px; color: var(--muted); }
 
-.badge-container{ margin-bottom:4px; text-align:left; } /* moved badge above price, left-aligned */
+.badge-container{ margin-bottom:4px; text-align:left; }
 .badge{
   display:inline-block;
   background: var(--accent);
@@ -53,10 +53,9 @@ img{ max-width:100%; display:block; border-radius:12px; }
   font-weight:700;
   padding:4px 10px;
   border-radius:12px;
-  width:auto;
 }
 
-.meta{ display:flex; align-items:center; justify-content:flex-start; gap:12px; margin-bottom:8px; } /* price & rating under badge */
+.meta{ display:flex; align-items:center; justify-content:flex-start; gap:12px; margin-bottom:8px; }
 .price{ font-weight:800; }
 .rating{ color:#ffd166; font-weight:800; }
 
@@ -69,19 +68,13 @@ img{ max-width:100%; display:block; border-radius:12px; }
 .footer-inner{ padding:18px 0 30px; color: var(--muted); text-align:center; }
 
 #scrollTopBtn{
-  position: fixed;
-  bottom: 28px;
-  right: 28px;
-  display:none;
-  padding:10px 16px;
-  border-radius:30px;
+  position: fixed; bottom: 20px; right: 20px; z-index:100;
+  display:none; padding:10px 16px; border-radius:30px;
   font-size:16px; font-weight:700;
   background: var(--primary); color:#0a1320;
   border:none; cursor:pointer; opacity:0.85;
-  align-items:center; gap:6px;
   transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  z-index:100;
 }
 #scrollTopBtn:hover{
   opacity:1;
@@ -94,7 +87,7 @@ img{ max-width:100%; display:block; border-radius:12px; }
   .card{ flex-direction: column; }
   .card-media img{ width:100%; height:auto; }
   .actions .btn{ width:100%; }
-  .badge-container{text-align:left; margin-bottom:6px;}
-  .badge{font-size:13px; padding:6px 14px;}
-  .actions .btn{font-size:16px; padding:16px 20px;}
-           }
+  .badge-container{ text-align:left; margin-top:10px; }
+  .badge{ font-size:13px; padding:6px 14px; }
+  .actions .btn{ font-size:16px; padding:16px 20px; }
+}
