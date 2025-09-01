@@ -5,35 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Top Picks — Trusted Deals</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Hand-picked products that save you time, money, and hassle — top-rated deals you can trust.">
-
-  <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="Top Picks — Trusted Deals">
-  <meta property="og:description" content="Hand-picked products that save you time, money, and hassle.">
-  <meta property="og:image" content="assets/hero-image.jpg"> <!-- Replace with a good preview image -->
-  <meta property="og:url" content="https://yourusername.github.io/your-repo-name">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Styles & Fonts -->
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.png" />
-
-  <!-- Google Analytics (optional, replace ID with your own) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID');
-  </script>
 </head>
 <body>
 
-  <!-- Scroll-to-Top Button -->
-  <button id="scrollTopBtn" class="btn btn-primary">↑ Top</button>
+  <!-- Sticky Scroll-to-Top Button -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <button id="scrollTopBtn" class="btn btn-primary">
+        ↑ Scroll to Top
+      </button>
+    </div>
+  </header>
 
   <main>
     <!-- HERO -->
@@ -62,13 +48,19 @@
             <li>Case: USB-C fast charge</li>
             <li>IPX5 water-resistant</li>
           </ul>
+
+          <!-- Badge moved above price -->
           <div class="badge-container">
             <span class="badge">Top Rated</span>
           </div>
+
           <div class="meta">
             <span class="price">$39.99</span>
-            <span class="rating" aria-label="Rating 4.4 out of 5">★ 4.4</span>
+
+            <!-- NEW: Rating container for mini star graph -->
+            <div class="rating" data-rating="4.4"></div>
           </div>
+
           <div class="actions">
             <a class="btn btn-primary" href="https://example.com/your-affiliate-link?sku=earbuds" target="_blank" rel="nofollow noopener">Buy Now</a>
           </div>
@@ -88,13 +80,16 @@
             <li>PFAS-free coating</li>
             <li>Dishwasher safe</li>
           </ul>
+
           <div class="badge-container">
             <span class="badge">Best Seller</span>
           </div>
+
           <div class="meta">
             <span class="price">$54.00</span>
-            <span class="rating" aria-label="Rating 4.6 out of 5">★ 4.6</span>
+            <div class="rating" data-rating="4.6"></div>
           </div>
+
           <div class="actions">
             <a class="btn btn-primary" href="https://example.com/your-affiliate-link?sku=pan" target="_blank" rel="nofollow noopener">Buy Now</a>
           </div>
@@ -114,13 +109,16 @@
             <li>Steel core plates</li>
             <li>Rubberized grip</li>
           </ul>
+
           <div class="badge-container">
             <span class="badge">Top Rated</span>
           </div>
+
           <div class="meta">
             <span class="price">$129.00</span>
-            <span class="rating" aria-label="Rating 4.7 out of 5">★ 4.7</span>
+            <div class="rating" data-rating="4.7"></div>
           </div>
+
           <div class="actions">
             <a class="btn btn-primary" href="https://example.com/your-affiliate-link?sku=dumbbells" target="_blank" rel="nofollow noopener">Buy Now</a>
           </div>
@@ -138,4 +136,4 @@
 
   <script src="script.js" defer></script>
 </body>
-</html>
+  </html>
