@@ -111,3 +111,19 @@ img{ max-width:100%; display:block; border-radius:12px; }
   .card-media img{ width:100%; height:auto; }
   .actions .btn{ width:100%; }
 }
+@media (max-width:680px){
+  .badge-container {
+    text-align: center;        /* center badge on mobile */
+    margin-top: 10px;
+  }
+
+  .badge {
+    font-size: 13px;           /* slightly bigger for readability */
+    padding: 6px 14px;         /* make the pill a bit more clickable */
+  }
+
+  .actions .btn {
+    font-size: 16px;           /* slightly larger call-to-action */
+    padding: 16px 20px;
+  }
+}
