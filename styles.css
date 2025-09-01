@@ -25,12 +25,16 @@ img{ max-width:100%; display:block; border-radius:12px; }
 }
 #scrollTopBtn{
   display:none;
-  width:44px; height:44px; border-radius:50%;
-  font-size:20px; background: var(--primary); color:#0a1320;
-  border:none; cursor:pointer; opacity:0.85; transition: opacity 0.2s ease;
+  padding:10px 16px;
+  border-radius:30px;
+  font-size:16px; font-weight:700;
+  background: var(--primary); color:#0a1320;
+  border:none; cursor:pointer; opacity:0.85;
+  display:flex; align-items:center; gap:6px;
+  transition: opacity 0.2s ease;
 }
 #scrollTopBtn:hover{ opacity:1; }
-.show-scroll{ display:inline-block !important; }
+.show-scroll{ display:flex !important; }
 
 .hero{
   padding:60px 0 40px;
@@ -64,8 +68,8 @@ img{ max-width:100%; display:block; border-radius:12px; }
 .card-media img{ width:140px; height:140px; object-fit:cover; border-radius:12px; }
 .card-body{ padding:14px; display:flex; flex-direction:column; gap:10px; flex:1; }
 
-.card-title{ margin:0; font-size:20px; display:flex; align-items:center; gap:8px; }
-.badge{ background: var(--accent); color:#0a1320; font-size:12px; font-weight:700; padding:2px 6px; border-radius:8px; }
+.card-title{ margin:0; font-size:20px; display:flex; align-items:center; gap:8px; white-space:nowrap; }
+.badge{ background: var(--accent); color:#0a1320; font-size:12px; font-weight:700; padding:2px 8px; border-radius:12px; display:inline-block; }
 
 .card-desc{ margin:0; color:var(--muted); }
 .bullet-list{ margin:8px 0 0 18px; color: var(--muted); }
@@ -84,4 +88,5 @@ img{ max-width:100%; display:block; border-radius:12px; }
   .card{ flex-direction: column; }
   .card-media img{ width:100%; height:auto; }
   .actions .btn{ width:100%; }
-       }
+  #scrollTopBtn{ justify-content:center; padding:10px 12px; font-size:14px; }
+  }
