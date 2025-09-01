@@ -1,17 +1,18 @@
 // Footer year
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Scroll to Top button
-const scrollTopBtn = document.getElementById("scrollTopBtn");
+// Scroll-to-top button (appears after 200px)
+const scrollBtn = document.getElementById('scrollTopBtn');
 
-window.addEventListener("scroll", () => {
+window.addEventListener('scroll', () => {
   if (window.scrollY > 200) {
-    scrollTopBtn.style.display = "block";
+    scrollBtn.classList.add('show-scroll');
   } else {
-    scrollTopBtn.style.display = "none";
+    scrollBtn.classList.remove('show-scroll');
   }
 });
 
-scrollTopBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
