@@ -3,56 +3,131 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Top Picks — SolaceCo</title>
+  <title>Top Picks — Trusted Deals</title>
+
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.png" />
 </head>
 <body>
-  <!-- Header -->
-  <header class="hero">
-    <h1>Top Picks for You</h1>
-    <p>Carefully selected products at unbeatable prices</p>
+
+  <!-- Sticky Header with Scroll-to-Top Button -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <button id="scrollTopBtn" class="btn btn-primary" aria-label="Scroll to top">
+        ↑ <span class="btn-text">Scroll to Top</span>
+      </button>
+    </div>
   </header>
 
-  <!-- Product Section -->
-  <main class="product-grid">
-    <div class="product-card">
-      <img src="https://via.placeholder.com/150" alt="Product 1">
-      <div class="product-info">
-        <h2 class="product-title">Product 1</h2>
-        <p class="product-price">$29.99</p>
-        <div class="product-badges">
-          <span class="badge top-rated">Top Rated</span>
-          <span class="badge best-seller">Best Seller</span>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Curated Deals That Don’t Waste Your Time</h1>
+          <p>Zero fluff. Just products worth buying — with quick notes and direct links.</p>
         </div>
-        <p class="product-desc">A short description about this product goes here.</p>
-        <a href="#" class="buy-btn">Buy Now</a>
       </div>
-    </div>
+    </section>
 
-    <div class="product-card">
-      <img src="https://via.placeholder.com/150" alt="Product 2">
-      <div class="product-info">
-        <h2 class="product-title">Product 2</h2>
-        <p class="product-price">$49.99</p>
-        <div class="product-badges">
-          <span class="badge top-rated">Top Rated</span>
+    <!-- PRODUCTS -->
+    <section id="products" class="products container">
+      <!-- Product 1 -->
+      <article class="card">
+        <div class="card-media">
+          <img src="assets/earbuds.jpg" alt="Compact Bluetooth Earbuds" loading="lazy">
         </div>
-        <p class="product-desc">Another description to highlight the product features.</p>
-        <a href="#" class="buy-btn">Buy Now</a>
-      </div>
-    </div>
+        <div class="card-body">
+          <h3 class="card-title">Compact Bluetooth Earbuds</h3>
+          <p class="card-desc">Solid sound, long battery, pocket-size case. Great value for daily use.</p>
+          <ul class="bullet-list">
+            <li>Battery: ~8h playback</li>
+            <li>Case: USB-C fast charge</li>
+            <li>IPX5 water-resistant</li>
+          </ul>
+          <div class="meta">
+            <span class="price">$39.99</span>
+            <span class="rating" aria-label="Rating 4.4 out of 5">★ 4.4</span>
+          </div>
+          <div class="badge-container">
+            <span class="badge">Top Rated</span>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary"
+              href="https://example.com/your-affiliate-link?sku=earbuds"
+              target="_blank" rel="nofollow noopener">Buy Now</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 2 -->
+      <article class="card">
+        <div class="card-media">
+          <img src="assets/pan.jpg" alt="Ceramic Nonstick Pan" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Ceramic Nonstick Pan</h3>
+          <p class="card-desc">Even heating, easy cleanup, and sturdy handle. Everyday kitchen hero.</p>
+          <ul class="bullet-list">
+            <li>Oven-safe to 260°C</li>
+            <li>PFAS-free coating</li>
+            <li>Dishwasher safe</li>
+          </ul>
+          <div class="meta">
+            <span class="price">$54.00</span>
+            <span class="rating" aria-label="Rating 4.6 out of 5">★ 4.6</span>
+          </div>
+          <div class="badge-container">
+            <span class="badge">Best Seller</span>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary"
+              href="https://example.com/your-affiliate-link?sku=pan"
+              target="_blank" rel="nofollow noopener">Buy Now</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 3 -->
+      <article class="card">
+        <div class="card-media">
+          <img src="assets/dumbbells.jpg" alt="Adjustable Dumbbells Set" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Adjustable Dumbbells Set</h3>
+          <p class="card-desc">Space-saving set with quick dial. From light warm-ups to heavy lifts.</p>
+          <ul class="bullet-list">
+            <li>5–52.5 lb range</li>
+            <li>Steel core plates</li>
+            <li>Rubberized grip</li>
+          </ul>
+          <div class="meta">
+            <span class="price">$129.00</span>
+            <span class="rating" aria-label="Rating 4.7 out of 5">★ 4.7</span>
+          </div>
+          <div class="badge-container">
+            <span class="badge">Top Rated</span>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary"
+              href="https://example.com/your-affiliate-link?sku=dumbbells"
+              target="_blank" rel="nofollow noopener">Buy Now</a>
+          </div>
+        </div>
+      </article>
+    </section>
   </main>
 
-  <!-- Scroll to Top Button -->
-  <button id="scrollTopBtn">
-    ⬆ Scroll to Top
-  </button>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; <span id="year"></span> SolaceCo. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Trusted Deals • Curated picks, updated regularly.</p>
+      <p class="disclaimer">Prices and availability subject to change. Some links are affiliate links.</p>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
-</html>
+  </html>
