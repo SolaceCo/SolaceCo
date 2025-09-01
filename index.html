@@ -12,12 +12,10 @@
 </head>
 <body>
 
-  <!-- Sticky Header with Scroll-to-Top Button -->
+  <!-- Sticky Header (no scroll button here anymore) -->
   <header class="site-header">
     <div class="container header-inner">
-      <button id="scrollTopBtn" class="btn btn-primary" aria-label="Scroll to top">
-        ↑ <span class="btn-text">Scroll to Top</span>
-      </button>
+      <!-- keep header content minimal / centered if you want -->
     </div>
   </header>
 
@@ -127,6 +125,12 @@
       <p class="disclaimer">Prices and availability subject to change. Some links are affiliate links.</p>
     </div>
   </footer>
+
+  <!-- SCROLL TO TOP: fixed bottom-right (hidden by default) -->
+  <button id="scrollTopBtn" class="scroll-top" aria-label="Scroll to top" aria-hidden="true">
+    <span class="icon">↑</span>
+    <span class="label">Scroll to Top</span>
+  </button>
 
   <script src="script.js" defer></script>
 </body>
