@@ -1,53 +1,55 @@
-// Footer year
-const yearEl = document.getElementById('year');
-if(yearEl) yearEl.textContent = new Date().getFullYear();
+document.addEventListener('DOMContentLoaded', () => {
+    const buyButtons = document.querySelectorAll('.buy-button');
+    const backToTopButton = document.getElementById('back-to-top');
+    const navButtons = document.querySelectorAll('.category-nav a');
+    const stickyNav = document.querySelector('.category-nav');
 
-// Scroll-to-top button
-const scrollBtn = document.getElementById('scrollTopBtn');
-window.addEventListener('scroll', () => {
-  if(window.scrollY > 200) scrollBtn.classList.add('show-scroll');
-  else scrollBtn.classList.remove('show-scroll');
-});
+    // Button "pressed" effect
+    buyButtons.forEach(button => {
+        button.addEventListener('mousedown', () => {
+            button.classList.add('clicked');
+        });
+        button.addEventListener('mouseup', () => {
+            button.classList.remove('clicked');
+        });
+        button.addEventListener('mouseleave', () => {
+            button.classList.remove('clicked');
+        });
+    });
 
-scrollBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+    // Back to Top button functionality
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    });
 
-// Affiliate link click tracking
-const affiliateLinks = document.querySelectorAll('.actions .btn-primary');
-affiliateLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    console.log(`Affiliate clicked: ${link.href}`);
-  });
-});
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 
-/* SVG star rating with partial stars */
-document.querySelectorAll('.rating').forEach(ratingEl => {
-  const rating = parseFloat(ratingEl.dataset.rating);
-  const maxStars = 5;
+    // Smooth scroll for category navigation
+    navButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent the default jump
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                const navHeight = stickyNav.offsetHeight;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navHeight;
 
-  for (let i = 1; i <= maxStars; i++) {
-    const svgNS = "http://www.w3.org/2000/svg";
-    const star = document.createElementNS(svgNS, "svg");
-    star.setAttribute("viewBox", "0 0 24 24");
-
-    const path = document.createElementNS(svgNS, "path");
-    path.setAttribute("d", "M12 .587l3.668 7.431L24 9.168l-6 5.848 1.417 8.255L12 18.896 4.583 23.27 6 15.016 0 9.168l8.332-1.15z");
-
-    if (i <= Math.floor(rating)) {
-      // full star
-      star.appendChild(path);
-    } else if (i === Math.ceil(rating) && !Number.isInteger(rating)) {
-      // partial star using clipPath
-      const percent = rating - Math.floor(rating);
-      path.setAttribute("clip-path", `inset(0 ${100 - percent*100}% 0 0)`);
-      star.appendChild(path);
-    } else {
-      // empty star
-      star.classList.add("empty");
-      star.appendChild(path);
-    }
-
-    ratingEl.appendChild(star);
-  }
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 });
