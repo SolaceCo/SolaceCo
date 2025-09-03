@@ -18,13 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Back to Top button functionality
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
+    function toggleBackToTopButton() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
             backToTopButton.style.display = 'block';
         } else {
             backToTopButton.style.display = 'none';
         }
-    });
+    }
+
+    window.addEventListener('scroll', toggleBackToTopButton);
+    window.addEventListener('load', toggleBackToTopButton);
+    window.addEventListener('resize', toggleBackToTopButton);
 
     backToTopButton.addEventListener('click', () => {
         window.scrollTo({
@@ -36,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Smooth scroll for category navigation
     navButtons.forEach(button => {
         button.addEventListener('click', function(e) {
-            e.preventDefault(); // Prevent the default jump
+            e.preventDefault(); 
             
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
