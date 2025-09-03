@@ -97,7 +97,7 @@ body {
     border-bottom: 2px solid var(--primary-color);
     display: inline-block;
     padding-bottom: 0.5rem;
-    scroll-margin-top: 10rem; /* This is the new fix */
+    scroll-margin-top: 10rem;
 }
 
 /* --- Toolkit Item Styling --- */
@@ -211,6 +211,9 @@ footer {
     font-size: 24px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #back-to-top:hover {
